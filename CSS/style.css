@@ -1,0 +1,108 @@
+/* General Styling */
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Start Loading Screen */
+.loading-screen{
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+}
+.loading-screen .fa-spinner{
+    font-size: 5rem;
+}
+/* End Loading Screen */
+
+
+/* Start Side Nav-bar */
+.side-nav-menu{
+    /* width: 20rem; */
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: black;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+ul.links li{
+    cursor: pointer;
+}
+li{
+    padding-block: 5px;
+}
+.icons,.open-close-icon,.share > *{
+    cursor: pointer;
+}
+.open-close-icon{
+    font-size: 30px;
+}
+.nav-footer .footer p{
+    font-size: 12px;
+    font-weight: 300;
+}
+/* End Side Nav-bar */
+
+.item,.category,.area,.ingredient{
+    cursor: pointer;
+
+}
+.item-layer{
+    position: absolute;
+    inset: 0;
+    background-color: #f9f6f6ca;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+.item:hover .item-layer{
+    transform: translateY(0%);
+}
+
+.category-layer{
+    position: absolute;
+    inset: 0;
+    background-color: #f9f6f6ca;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+.category-layer p{
+    font-size: 12px;
+    font-weight: 400;
+}
+.category:hover .category-layer{
+    transform: translateY(0%);
+}
+
+
+p.instructions{
+    font-size: 12px;
+    font-weight: 300;
+}
+.search .form-control::placeholder{
+    color: #fff7;
+    font-size: 13px;
+}
