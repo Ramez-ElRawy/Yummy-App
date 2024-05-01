@@ -59,8 +59,6 @@ function toggleSidebarIcon()
     $(".fa-xmark").toggleClass("d-none");
 }
 
-// $(".loading-screen").css("z-index","99999");
-
 async function getAllMealsData(mealName,firstLitter)
 {
     showLoadingScreen();

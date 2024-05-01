@@ -13,7 +13,7 @@ a{
 .loading-screen{
     position: fixed;
     inset: 0;
-    z-index: 999;
+    z-index: 999999;
     display: flex;
 }
 .loading-screen .fa-spinner{
