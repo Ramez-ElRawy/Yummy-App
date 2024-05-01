@@ -24,16 +24,14 @@ a{
 
 /* Start Side Nav-bar */
 .side-nav-menu{
-    /* width: 20rem; */
     width: fit-content;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 99;
+    z-index: 9999;
     background-color: black;
 }
-
 .logo{
     width: 50px;
     cursor: pointer;
@@ -56,6 +54,8 @@ li{
 }
 /* End Side Nav-bar */
 
+
+/* Start Main */
 .item,.category,.area,.ingredient{
     cursor: pointer;
 
@@ -106,3 +106,4 @@ p.instructions{
     color: #fff7;
     font-size: 13px;
 }
+/* End Main */

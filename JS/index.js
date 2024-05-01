@@ -53,6 +53,14 @@ function hideLoadingScreen()
     $("body").css("overflow","visible");
 }
 
+function toggleSidebarIcon()
+{
+    $(".fa-bars").toggleClass("d-none");
+    $(".fa-xmark").toggleClass("d-none");
+}
+
+// $(".loading-screen").css("z-index","99999");
+
 async function getAllMealsData(mealName,firstLitter)
 {
     showLoadingScreen();
@@ -70,7 +78,9 @@ async function getAllMealsData(mealName,firstLitter)
         response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${firstLitter}`);
     }
     mealsData = await response.json();
-    sliceMealsArr(mealsData);
+    $(".loading-screen").css("z-index","999");
+
+    displayMeals(mealsData.meals);
 }
 
 function sliceMealsArr(originalArr)
@@ -473,8 +483,8 @@ $("ul.links li").on("click",(e)=>{
             row.append(searchByNameDiv,searchByFirstLitterDiv);
 
             $(".side-nav-menu").animate({"left":-$(".nav-tab").outerWidth()},500);
-            $(".fa-bars").toggleClass("d-none");
-            $(".fa-xmark").toggleClass("d-none");
+
+            toggleSidebarIcon();
 
             $("input").eq(0).on("input",(e)=>{
                 $("div.col-md-6").eq(1).nextAll().remove();
@@ -488,26 +498,22 @@ $("ul.links li").on("click",(e)=>{
             break;
         case "categories":
             $(".side-nav-menu").animate({"left":-$(".nav-tab").outerWidth()},500);
-            $(".fa-bars").toggleClass("d-none");
-            $(".fa-xmark").toggleClass("d-none");
+            toggleSidebarIcon();
             getAllCategories();    
             break;
         case "area":
             $(".side-nav-menu").animate({"left":-$(".nav-tab").outerWidth()},500);
-            $(".fa-bars").toggleClass("d-none");
-            $(".fa-xmark").toggleClass("d-none");
+            toggleSidebarIcon();
             getAllAreas();  
             break;
         case "ingredients":
             $(".side-nav-menu").animate({"left":-$(".nav-tab").outerWidth()},500);
-            $(".fa-bars").toggleClass("d-none");
-            $(".fa-xmark").toggleClass("d-none");
+            toggleSidebarIcon();
             getAllIngredients();
             break;
         case "contact":
             $(".side-nav-menu").animate({"left":-$(".nav-tab").outerWidth()},500);
-            $(".fa-bars").toggleClass("d-none");
-            $(".fa-xmark").toggleClass("d-none");
+            toggleSidebarIcon();
             row.innerHTML = `                    
             <div class="contact-us">
                 <div class="container w-75 text-center">
