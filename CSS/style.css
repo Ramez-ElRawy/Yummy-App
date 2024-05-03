@@ -71,6 +71,11 @@ li{
     font-weight: 500;
     transform: translateY(100%);
     transition: all 0.5s;
+    overflow: hidden;
+}
+.item-layer a{
+    font-size: 18px;
+    font-weight: 700;
 }
 .item:hover .item-layer{
     transform: translateY(0%);
@@ -88,6 +93,7 @@ li{
     font-weight: 500;
     transform: translateY(100%);
     transition: all 0.5s;
+    overflow: hidden;
 }
 .category-layer p{
     font-size: 12px;
